@@ -6,8 +6,25 @@ import About from "./About";
 
 const GlobalStyle = createGlobalStyle`
 	body {
+		font-size: 12px;
+		font-family: 'Spartan', sans-serif;
 		margin: 0;
 		padding: 0;
+		overflow: hidden;
+	}
+
+	h1,h3 {
+		margin: 0;
+	}
+
+	p {
+		line-height: 1.25rem;
+	}
+
+	#root {
+		height: 100vh;
+		display: grid;
+		grid-template-rows: 70% 30%;
 	}
 `;
 
