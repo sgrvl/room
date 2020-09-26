@@ -1,6 +1,7 @@
 import React from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import ShopNow from "./ShopNow";
+import ShopNow from "./ShopNow/ShopNow";
+import Header from "./Header";
 
 const GlobalStyle = createGlobalStyle``;
 
@@ -12,6 +13,7 @@ const theme = {
 function App() {
 	return (
 		<ThemeProvider theme={theme}>
+			<Header />
 			<ShopNow />
 			<GlobalStyle />
 		</ThemeProvider>
