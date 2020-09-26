@@ -4,7 +4,12 @@ import ShopNow from "./ShopNow/ShopNow";
 import Header from "./Header";
 import About from "./About";
 
-const GlobalStyle = createGlobalStyle``;
+const GlobalStyle = createGlobalStyle`
+	body {
+		margin: 0;
+		padding: 0;
+	}
+`;
 
 const theme = {
 	darkGray: "hsl(0, 0%, 63%)",
