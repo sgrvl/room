@@ -4,31 +4,45 @@ import img1 from "../images/image-about-dark.jpg";
 import img2 from "../images/image-about-light.jpg";
 
 const Wrap = styled.div`
-	grid-row: 2;
-	display: grid;
-	grid-template-columns: 30% 40% 30%;
+	@media screen and (min-width: 900px) {
+		grid-row: 2;
+		display: grid;
+		grid-template-columns: 30% 40% 30%;
+		.img1 {
+			grid-column: 1;
+		}
+		.text {
+			grid-column: 2;
+		}
+		.img2 {
+			grid-column: 3;
+		}
+		img {
+			width: 100%;
+			height: auto;
+			min-height: 100%;
+			object-fit: cover;
+		}
+	}
+	display: flex;
+	flex-direction: column;
 
 	img {
 		width: 100%;
-		height: auto;
-		min-height: 100%;
-		object-fit: cover;
-	}
-
-	.img1 {
-		grid-column: 1;
 	}
 
 	.text {
-		grid-column: 2;
-		padding: 2.5rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.img2 {
-		grid-column: 3;
+		@media screen and (min-width: 900px) {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0 2rem;
+		}
+		p {
+			margin-bottom: 0;
+		}
+		padding: 3rem 2rem;
 	}
 `;
 
