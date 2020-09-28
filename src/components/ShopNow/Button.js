@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { ReactComponent as ArrowLeft } from "../../images/icon-angle-left.svg";
 import { ReactComponent as ArrowRight } from "../../images/icon-angle-right.svg";
-import { useCycle } from "framer-motion";
 
 const BtnWrap = styled.div`
 	display: none;
@@ -36,10 +35,18 @@ const Button = ({ hero, setHero }) => {
 	};
 	return (
 		<BtnWrap>
-			<button onClick={() => handleSlides(hero - 1)}>
+			<button
+				onClick={() => {
+					handleSlides(hero - 1);
+				}}
+			>
 				<ArrowLeft />
 			</button>
-			<button onClick={() => handleSlides(hero + 1)}>
+			<button
+				onClick={() => {
+					handleSlides(hero + 1);
+				}}
+			>
 				<ArrowRight />
 			</button>
 		</BtnWrap>

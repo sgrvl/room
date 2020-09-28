@@ -12,9 +12,12 @@ const Wrap = styled.div`
 	line-height: 0;
 	grid-column: 1;
 	position: relative;
+	overflow: hidden;
+	height: 100%;
 `;
 
 const Image = styled.img`
+	min-width: 100%;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
